@@ -1,12 +1,15 @@
 :root{
     --theme-color: aqua;
     --link-color: #333; 
-    --layout: 1fr 1fr 1fr;
+    --layout: 2fr 2fr 2fr;
 }
 
 
 @media screen and (max-width:760px){
-     --layout: 1fr 1fr 1fr;
+    :root{
+        
+        --layout:1fr;
+    }
     
 }
 /* --- Main styles --- */
@@ -80,8 +83,7 @@ footer{
 
 footer .blurbs{
     display: grid;
-    grid-template-columns: var
-(--layout);
+    grid-template-columns: var(--layout);
     max-width: 760px;
     margin: 0 auto;
     grid-gap: 40px;
