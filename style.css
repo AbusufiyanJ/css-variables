@@ -1,8 +1,14 @@
 :root{
-    --theme-color: #3e84da;
-    --link-color: #daa33e;
+    --theme-color: aqua;
+    --link-color: #333; 
+    --layout: 1fr 1fr 1fr;
 }
 
+
+@media screen and (max-width:760px){
+     --layout: 1fr 1fr 1fr;
+    
+}
 /* --- Main styles --- */
 
 h1, h2, h3{
@@ -40,7 +46,7 @@ nav a{
     width: 760px;
     margin: 0 auto;
     position: relative;
-    top: -100px;
+    top:  -100px;
     padding: 40px 60px;
     background: #fff
 }
@@ -57,7 +63,9 @@ nav a{
 .spot p{
     color: #333;
     line-height: 2em;
-    font-size: 0.9em
+    font-size: 0.9em;
+
+        
 }
 
 .content a{
@@ -72,7 +80,8 @@ footer{
 
 footer .blurbs{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: var
+(--layout);
     max-width: 760px;
     margin: 0 auto;
     grid-gap: 40px;
